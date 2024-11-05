@@ -1,0 +1,769 @@
+body {
+    margin: 0;
+    width: 100%;
+    background-color: white;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: white;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgb(168, 168, 168);
+    border-radius: 10px;
+    transition: background-color 0.9s;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background-color: gray;
+}
+
+.header {
+    height: 104px;
+    background-color: black;
+    margin-bottom: 60px;
+}
+
+.header__inner {
+    display: flex;
+    position: relative;
+    width: 1296px;
+    height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    top: 32px;
+    bottom: 32px;
+
+}
+
+.pod__svg_logo {
+    width: 326px;
+    height: 12px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+
+.info__panel {
+    position: relative;
+    display: flex;
+    width: 970px;
+    height: 22px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    gap: 10px;
+    align-items: center;
+}
+
+.af {
+    padding-left: 230px;
+    height: 22px;
+}
+
+.af__a {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    height: 22px;
+    align-content: center;
+    align-items: center;
+    top: 2px;
+    border: none;
+    color: red;
+}
+
+.af__aa {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    height: 22px;
+    align-content: center;
+    align-items: center;
+    top: 2px;
+    border: none;
+}
+
+.rac__a {
+    position: relative;
+    top: 1px;
+}
+
+.af__b {
+    position: relative;
+    top: 2px;
+}
+
+.af__c {
+    position: relative;
+    top: 2.5px;
+}
+
+.af__cc {
+    color: red;
+}
+
+.af__d {
+    position: relative;
+    top: 2px;
+}
+
+.af__e {
+    position: relative;
+    top: 3px;
+}
+
+.af__ee {
+    position: relative;
+    top: 3px;
+}
+
+.lists-activa {
+    color: red;
+}
+
+.af__f {
+    position: relative;
+    top: 3px;
+    padding-right: 0;
+}
+
+.af__ff {
+    color: red;
+}
+
+.auth {
+    display: flex;
+    width: 80px;
+    height: 40px;
+    position: relative;
+    /* background-color: white;
+    border-radius: 20px; */
+}
+
+.auth__btn {
+    position: relative;
+    display: flex;
+    width: 80px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    transition: background-color 0.9s;
+    cursor: pointer;
+    color: black;
+}
+
+.auth__btn_login {
+    position: relative;
+    display: flex;
+    width: 80px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: red;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    transition: background-color 0.9s;
+    cursor: pointer;
+    color: black;
+}
+
+.auth__btn:hover {
+    background-color: rgba(255, 255, 255, 0.808);
+}
+
+
+.auth__enter {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 15px;
+}
+
+.slider {
+    width: 1296px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 497px;
+}
+
+.slider {
+    display: flex;
+    margin-bottom: 180px;
+}
+
+.afisha_a {
+    text-decoration: none;
+    color: black;
+}
+
+.right__main__panel {
+    background-color: white;
+    width: 416px;
+    height: 224px;
+    padding-left: 24px; 
+}
+
+.first__main {
+    background-color: #1919191f;
+    border-radius: 8px;
+    width: 416px;
+    height: 104px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.second__main {
+    position: relative;
+    display: flex;
+    /* top: 100px; */
+    background-color: #1919191f;
+    border-radius: 8px;
+    width: 416px;
+    height: 104px;
+    margin-top: 16px;
+}
+
+.im__1 {
+    position: relative;
+    top: 12px;
+    left: 16px;
+    width: 80px;
+    height: 80px;
+}
+
+.im__2 {
+    position: relative;
+    top: 12px;
+    left: 16px;
+    width: 80px;
+    height: 80px;
+}
+
+.text__1 {
+    position: relative;
+    padding-left: 50px;
+    bottom: 20px;
+}
+
+.text__2 {
+    position: relative;
+    padding-left: 50px;
+    top: 43px;
+}
+
+.afisha__main {
+    width: 1296px;
+    height: 935px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.af__header {
+    display: flex;
+    height: 67px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'EB Garamond', serif;
+    font-size: 48px;
+    margin-bottom: 133px;
+    cursor: default;
+}
+
+.calend__icon {
+    position: relative;
+    left: 900px;
+    top: 10px;
+    height: 41px;
+}
+
+.event__span__btn {
+    text-decoration-line: none;
+    color: black;
+}
+
+.event__span {
+    position: relative;
+    font-family: 'EB Garamond', serif;
+    font-size: 24px;
+    top: -12px;
+    left: 10px;
+}
+
+.soon__first {
+    display: flex;
+    width: 1296px;
+    height: 304px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 80px;
+    background-color: #1919191f;
+    border-radius: 16px;
+}
+
+.data__event__first {
+    user-select: none;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 79px;
+    height: 119px;
+    left: 70px;
+    top: 80px;
+}
+
+.number {
+    position: relative;
+    padding-bottom: 16px;
+    font-family: 'EB Garamond', serif;
+    font-size: 64px;
+    color: rgba(0, 0, 0, 0.336);
+    text-align: center;
+}
+
+.month {
+    font-family: 'EB Garamond', serif;
+    font-size: 32px;
+    color: rgba(0, 0, 0, 0.336);
+}
+
+.poster__one {
+    position: relative;
+    width: 320px;
+    height: 240px;
+    left: 135px;
+    top: 31px;
+}
+
+.first__info {
+    display: flex;
+    position: relative;
+    width: 415px;
+    height: 200px;
+    top: 50px;
+    left: 190px;
+    flex-direction: column;
+}
+
+.card__header {
+    position: relative;
+    width: 415px;
+    height: 90px;
+}
+
+.card__middle {
+    position: relative;
+    width: 415px;
+    height: 50px;
+    padding-top: 25px;
+}
+
+.card__bottom {
+    position: relative;
+    display: flex;
+    width: 415px;
+    padding-top: 20px;
+    height: 50px;
+    column-gap: 25px;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.event__name {
+    display: inline-flex;
+    font-family: 'EB Garamond', serif;
+    font-size: 32px;
+    white-space: nowrap;
+    width: 415px;
+    height: 90px;
+}
+
+.event__second__name {
+    position: relative;
+    display: inline-flex;
+    width: 415px;
+    height: 50px;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.432);
+    white-space: nowrap;
+}
+
+.type__icon {
+    position: relative;
+    color: rgba(0, 0, 0, 0.432);
+    top: 7px;
+}
+
+.type__name {
+    position: relative;
+    color: rgba(0, 0, 0, 0.432);
+}
+
+.time__icon {
+    position: relative;
+    color: rgba(0, 0, 0, 0.432);
+}
+
+.time {
+    position: relative;
+    color: rgba(0, 0, 0, 0.432);
+}
+
+.per__icon {
+    position: relative;
+    color: rgba(0, 0, 0, 0.432);
+}
+
+.age__value {
+    position: relative;
+    color: rgba(0, 0, 0, 0.432);
+}
+
+.selling__btn {
+    position: relative;
+    left: 250px;
+    top: 126.5px;
+    width: 175px;
+    height: 51px;
+} 
+
+.sell {
+    width: 175px;
+    height: 51px;
+    position: relative;
+    text-decoration-line: none;
+    cursor: pointer;
+    justify-items: center;
+    border-radius: 50px;
+    background-color: #05B093;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    cursor: pointer;
+    color: white;
+    transition: background-color 0.9s;
+}
+
+.sell:hover {
+    background-color: #05b0939c;
+}
+
+.soon__second {
+    display: flex;
+    width: 1296px;
+    height: 304px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 80px;
+    background-color: #1919191f;
+    border-radius: 16px;
+}
+
+.number__sec {
+    position: relative;
+    padding-bottom: 16px;
+    font-family: 'EB Garamond', serif;
+    font-size: 64px;
+    color: rgba(0, 0, 0, 0.336);
+    text-align: center;
+}
+
+.bottom {
+    position: relative;
+    width: 1296px;
+    height: 989px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.modal {
+    position: fixed;
+    display: none;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.527);
+    cursor: pointer;
+}
+
+.modal__main {
+    position: relative;
+    max-width: 900px;
+    background-color: rgb(255, 255, 255);
+    margin: auto;
+    border-radius: 16px;
+    padding: 50px;
+    cursor: default;
+}
+
+.modal__title {
+    position: relative;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.username__email {
+    font-family: 'EB Garamond', serif;
+    width: 300px;
+    height: 35px;
+    border-radius: 5px;
+    border: solid 1px rgba(0, 0, 0, 0.171);
+    font-size: 18px;
+    padding-left: 20px;
+}
+
+.user__password {
+    font-family: 'EB Garamond', serif;
+    width: 300px;
+    height: 35px;
+    border-radius: 5px;
+    border: solid 1px rgba(0, 0, 0, 0.171);
+    font-size: 18px;
+    padding-left: 20px;
+}
+
+.enter__btn {
+    font-family: 'EB Garamond', serif;
+    height: 45px;
+    border-radius: 5px;
+    border: solid 1px rgba(0, 0, 0, 0.171);
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    transition: background-color 0.9s;
+    cursor: pointer;
+}
+
+.enter__btn:hover {
+    background-color: rgba(0, 0, 0, 0.747);
+}
+
+.create__pass {
+    text-decoration-line: none;
+    color: rgba(64, 64, 224, 0.849);
+}
+
+.wrapper {
+    position: relative;
+    height: 386px;
+    background-color: #191919;
+}
+
+.wrapper__container {
+    display: flex;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    top: 73px;
+    width: 1298px;
+    height: 240px;
+}
+
+.ic {
+    width: 326px;
+}
+
+.ic__ic {
+    position: relative;
+    top: 9.5px;
+}
+
+.events {
+    width: 416px;
+    height: 88px;
+    padding-left: 90px;
+    display: flex;
+    flex-direction: column;
+}
+
+.events__names {
+    padding-top: 40px;
+    display: inline-flex;
+    gap: 60px;
+}
+
+.events__sp {
+    color: white;
+    font-family: 'EB Garamond', bold;
+    font-size: 24px;
+}
+
+.events__sps {
+    text-decoration: none;
+    color: white;
+    font-family: 'EB Garamond', serif;
+    font-size: 16px;
+}
+
+.contacts {
+    width: 416px;
+    height: 88px;
+    padding-left: 50px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.cont_sp {
+    color: white;
+    font-family: 'EB Garamond', bold;
+    font-size: 24px;
+}
+
+.contacts__names {
+    display: flex;
+    padding-top: 40px;
+    flex-direction: column;
+    gap: 20px;
+    color: white;
+    font-family: 'EB Garamond', serif;
+    font-size: 16px;
+}
+
+.newest {
+    margin-left: 307px;
+    font-family: 'EB Garamond', serif;
+    font-size: 20px;
+}
+
+.nav-div {
+    margin-left: 25px;
+}
+
+.nav-span {
+    color: black;
+    font-size: 20px;
+}
+
+.payment {
+    color: blue;
+    text-decoration: underline;
+}
+
+.afisha__main-2 {
+    width: 1296px;
+    height: 935px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 150px;
+}
+
+.child {
+    margin-bottom: 120px;
+}
+
+.childrens {
+    text-decoration: underline;
+}
+
+
+table {
+    border-collapse: collapse;
+    border: 2px solid rgb(140 140 140);
+    letter-spacing: 1px;
+  }
+  
+  caption {
+    caption-side: bottom;
+    padding: 10px;
+    font-weight: bold;
+  }
+  
+
+  
+  th,
+  td {
+    border: 1px solid rgb(160 160 160);
+    padding: 50px 50px;
+  }
+  
+  td:last-of-type {
+    text-align: center;
+  }
+  
+  
+  tfoot th {
+    text-align: right;
+  }
+  
+  tfoot td {
+    font-weight: bold;
+  }
+
+.table {
+    display: grid;
+    align-items: stretch;
+    justify-items: center;
+    height: 762px;
+}
+
+.afisha__main-3 {
+    width: 1296px;
+    height: 935px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 200px;
+}
+
+
+.table-table {
+    background-image: url(D:/My/project/img/red-velvet-seats-theater-villena-spain_223582-1065.png);
+}
+
+.a-blue-table {
+    text-decoration: underline;
+    color: blue;
+}
+
+.benefits-img {
+    background-image: url(D:/My/project/img/childrens.png);
+}
+
+.inputs {
+    margin-bottom: 20px;
+}
+
+.radio-div {
+    margin-bottom: 10px;
+}
+
+.afisha__main-4 {
+    width: 1296px;
+    height: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.af__ff {
+    color: red;
+}
+
+.af__dd {
+    color: red;
+}
