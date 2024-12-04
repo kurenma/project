@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@700&display=swap" rel="stylesheet">
-    <title>Вход</title>
+    <title>Решение задачи с отправкой формы</title>
 </head>
 <body>
     <div class="header">
@@ -46,7 +46,7 @@
                     <svg class="rac__a" xmlns="http://www.w3.org/2000/svg" width="8" height="8" fill="none"><rect width="6" height="6" x="-.213" y="4" fill="#fff" rx="1" transform="rotate(-45 -.213 4)"/></svg>
                 </div>
                 <div class="af__d">
-                    <a href="task.html">
+                    <a href="" class="af__dd">
                         <span>Задача</span>
                     </a>
                 </div>
@@ -78,7 +78,7 @@
                     <svg class="rac__a" xmlns="http://www.w3.org/2000/svg" width="8" height="8" fill="none"><rect width="6" height="6" x="-.213" y="4" fill="#fff" rx="1" transform="rotate(-45 -.213 4)"/></svg>
                 </div>
                 <div class="auth">
-                    <a href="" class="auth__btn_login">
+                    <a href="login.html" class="auth__btn">
                         <!-- <span class="auth__enter">Войти</span> -->
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" id="Login-2--Streamline-Sharp-Remix" height="24" width="24"><desc>Login 2 Streamline Icon: https://streamlinehq.com</desc><g id="Remix/Interface Essential/login-2--arrow-enter-left-login-point-circle"><path id="Union" fill="#000000" fill-rule="evenodd" d="M2.5 12c0 -5.24671 4.25329 -9.5 9.5 -9.5 4.1052 0 7.6021 2.60382 8.9295 6.25h2.6252C22.1376 3.70164 17.5011 0 12 0 5.37258 0 0 5.37258 0 12c0 6.6274 5.37258 12 12 12 5.5011 0 10.1376 -3.7016 11.5547 -8.75h-2.6252C19.6021 18.8962 16.1052 21.5 12 21.5c-5.24671 0 -9.5 -4.2533 -9.5 -9.5Zm11 -1.25H24v2.5H13.5v3.25H12L7.5 12 12 7.5h1.5v3.25Z" clip-rule="evenodd" stroke-width="1"></path></g></svg>
                     </a>
@@ -87,48 +87,22 @@
         </div>
     </div>
     <div class="afisha__main">
-        <form action="https://www.bing.com/search?" id="userform" name="userform" target="_blank" style="width: 400px;">
-            <input type="hidden" name="q" value="search" id="query">
-            <div class="inputs" style="display: grid; width: 50px;">
-                <span>Имя</span>
-                <input class="input-class" type="text" name="name" id="name" value="Михаил" style="width: 200px;">
-            </div>
-            <div class="inputs" style="display: grid; width: 50px;">
-                <span>Возраст</span>
-                <input type="number" class="input-class" name="age" id="age" value="19" style="width: 200px;">
-            </div>
-            <div class="inputs" style="display: grid;">
-                <span style="margin-bottom: 10px;">Являетесь ли вы льготником?</span>
-                <div class="radio-div">
-                    <input type="radio" name="benefits" value="true">Да
-                </div>
-                <div class="radio-div">
-                    <span hidden>Напишите, к какой категории льготников вы относитесь</span>
-                    <input type="text" name="benefitsname">
-                </div>
-                <div class="radio-div">
-                    <input type="radio" name="benefits" value="false" checked>Нет
-                </div>
-                <div style="display: grid;" class="inputs">
-                    <span>Введите пароль</span>
-                    <input type="password" value="password" class="input-class" style="width: 200px;" name="password">
-                </div>
-                <div style="display: grid;" class="inputs">
-                    <span>Когда Вы планируете прийти на наше мероприятие?</span>
-                    <input type="date" name="datejoin" value="2024-12-31" class="input-class" style="width: 200px;">
-                </div>
-                <div style="display: grid;" class="inputs">
-                    <div>
-                        <input type="checkbox" checked name="terms" value="true">Я принимаю Правила
-                    </div>
-                    <div>
-                        <input type="checkbox" checked name="terms-data" value="true">Я согласен на обработку персональных данных
-                    </div>
-                </div>
-                <input type="submit" style="width: 200px; margin-bottom: 10px;" placeholder="Отправить">
-                <input type="reset" style="width: 200px;" placeholder="Сбросить">
-            </div>
-        </form>
+        <h1>Решение алгоритмической задачи</h1>
+            <h3>Проверка объёмов ёмкостей</h1>
+            <label for="cube_edge" class="label-task">Ребро куба (A):</label>
+            <input type="number" id="cube_edge" required name="cube_edge">
+
+            <label for="cylinder_radius" class="label-task">Радиус основания цилиндра (R):</label>
+            <input type="number" id="cylinder_radius" required name="cylinder_radius">
+
+            <label for="cylinder_height" class="label-task">Высота цилиндра (H):</label>
+            <input type="number" id="cylinder_height" required name="cylinder_height">
+
+            <label for="liquid_volume" class="label-task">Объём жидкости (M):</label>
+            <input type="number" id="liquid_volume" required name="liquid_volume">
+
+            <button id="check_volumes" type="submit">Проверить</button>
+            <input type="hidden" name="result" id="result">
     </div>
     <div class="wrapper" id="contacts">
         <div class="wrapper__container">
@@ -159,5 +133,6 @@
             </div>
         </div>
     </div>
+    <script src="scripts/task2.js"></script>
 </body>
 </html>
