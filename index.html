@@ -13,7 +13,7 @@
     <title>Theater</title>
 </head>
 <body>
-    <div class="header">
+    <div class="header ">
         <div class="header__inner">
             <div class="pod__svg_logo">
                 <a href="" id="index">
@@ -123,6 +123,11 @@
             <div class="name__af">
                 <a href="#afisha" target="_self" class="afisha_a" id="afisha"><span>Афиша</span></a>
             </div>
+            <div>
+                <span style="font-size: 20px;">Сортировка:</span>
+                <button id="sortAsc" class="sortbtn">Новее</button>
+                <button id="sortDesc" class="sortbtn">Старее</button>
+            </div>
             <div class="calend__icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="41" fill="none"><path fill="#05B093" d="M2.5 36.125A1.875 1.875 0 0 0 4.375 38h31.25a1.875 1.875 0 0 0 1.875-1.875V14.25h-35v21.875Zm25-19.063a.313.313 0 0 1 .313-.312h3.125a.313.313 0 0 1 .312.313v3.125a.313.313 0 0 1-.313.312h-3.125a.313.313 0 0 1-.312-.313v-3.125Zm0 6.25a.313.313 0 0 1 .313-.312h3.125a.313.313 0 0 1 .312.313v3.125a.313.313 0 0 1-.313.312h-3.125a.313.313 0 0 1-.312-.313v-3.125Zm-6.25-6.25a.313.313 0 0 1 .313-.312h3.125a.313.313 0 0 1 .312.313v3.125a.313.313 0 0 1-.313.312h-3.125a.313.313 0 0 1-.312-.313v-3.125Zm0 6.25a.313.313 0 0 1 .313-.312h3.125a.313.313 0 0 1 .312.313v3.125a.313.313 0 0 1-.313.312h-3.125a.313.313 0 0 1-.312-.313v-3.125Zm0 6.25a.313.313 0 0 1 .313-.312h3.125a.313.313 0 0 1 .312.313v3.125a.313.313 0 0 1-.313.312h-3.125a.313.313 0 0 1-.312-.313v-3.124ZM15 23.313a.313.313 0 0 1 .313-.312h3.124a.313.313 0 0 1 .313.313v3.125a.313.313 0 0 1-.313.312h-3.125a.313.313 0 0 1-.312-.313v-3.125Zm0 6.25a.313.313 0 0 1 .313-.312h3.124a.313.313 0 0 1 .313.313v3.125a.313.313 0 0 1-.313.312h-3.125a.313.313 0 0 1-.312-.313v-3.124Zm-6.25-6.25A.313.313 0 0 1 9.063 23h3.124a.313.313 0 0 1 .313.313v3.125a.313.313 0 0 1-.313.312H9.063a.312.312 0 0 1-.313-.313v-3.125Zm0 6.25a.313.313 0 0 1 .313-.312h3.124a.313.313 0 0 1 .313.313v3.125a.313.313 0 0 1-.313.312H9.063a.312.312 0 0 1-.313-.313v-3.124ZM35.625 5.5h-4.369V3h-3.75v2.5H12.494V3h-3.75v2.5H4.375A1.86 1.86 0 0 0 2.5 7.357v4.393h35V7.357A1.859 1.859 0 0 0 35.625 5.5Z"/></svg>
                 <a class="event__span__btn" target="_self" href="">
@@ -130,202 +135,204 @@
                 </a>
             </div>
         </div>
-        <div class="soon__first">
-            <div class="data__event__first">
-                <span class="number">3</span>
-                <span class="month">июня</span>
-            </div>
-            <img class="poster__one" src="img/poster__image.png" alt="">
-            <div class="first__info">
-                <div class="card__header" >
-                    <span class="event__name" >Антонио Вивальди. Времена<br>года</span>
+        <div id="events-container" class="events-container">
+            <div class="soon__first">
+                <div class="data__event__first">
+                    <span class="number">3</span>
+                    <span class="month">июня</span>
                 </div>
-                <div class="card__middle">
-                    <span class="event__second__name" >Посвящение Фрэнку Синатре.</span>
-                </div>
-                <div class="card__bottom">
-                    <div>
-                        <svg class="type__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M6 18.573c2.206 0 4-1.794 4-4V4.428L19 7.7v7.43a3.953 3.953 0 0 0-2-.557c-2.206 0-4 1.794-4 4s1.794 4 4 4s4-1.794 4-4V7a.998.998 0 0 0-.658-.939l-11-4A.999.999 0 0 0 8 3v8.13a3.953 3.953 0 0 0-2-.557c-2.206 0-4 1.794-4 4s1.794 4 4 4"/></svg>
-                        <span class="type__name" >Джаз</span>
+                <img class="poster__one" src="img/poster__image.png" alt="">
+                <div class="first__info">
+                    <div class="card__header" >
+                        <span class="event__name" >Антонио Вивальди. Времена<br>года</span>
                     </div>
-                    <div>
-                        <svg class="type__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none"><path d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12S6.477 2 12 2m0 4a1 1 0 0 0-1 1v5a1 1 0 0 0 .293.707l3 3a1 1 0 0 0 1.414-1.414L13 11.586V7a1 1 0 0 0-1-1"/></g></svg>
-                        <span class="time">19:00</span>
+                    <div class="card__middle">
+                        <span class="event__second__name" >Посвящение Фрэнку Синатре.</span>
                     </div>
-                    <div>
-                        <svg class="type__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512"><path fill="currentColor" d="M332.64 64.58C313.18 43.57 286 32 256 32c-30.16 0-57.43 11.5-76.8 32.38c-19.58 21.11-29.12 49.8-26.88 80.78C156.76 206.28 203.27 256 256 256s99.16-49.71 103.67-110.82c2.27-30.7-7.33-59.33-27.03-80.6M432 480H80a31 31 0 0 1-24.2-11.13c-6.5-7.77-9.12-18.38-7.18-29.11C57.06 392.94 83.4 353.61 124.8 326c36.78-24.51 83.37-38 131.2-38s94.42 13.5 131.2 38c41.4 27.6 67.74 66.93 76.18 113.75c1.94 10.73-.68 21.34-7.18 29.11A31 31 0 0 1 432 480"/></svg>
-                        <span class="age__value">6+</span>
-                    </div>
-                </div>
-            </div>
-            <div class="selling__btn">
-                <form action="https://www.bing.com/search?">
-                    <input name="q" type="hidden" value="search">
-                    <input type="hidden" name="title" value="Антонио Вивальди. Времена года">
-                    <input type="datetime" name="date" value="2024-06-03" style="display: none;">
-                    <input class="sell" type="submit" value="Заказать билет" style="font-family: Fira Sans, sans-serif">
-                </form>
-            </div>
-        </div>
-        <div class="soon__second">
-            <div class="data__event__first">
-                <span class="number__sec">30</span>
-                <span class="month">июня</span>
-            </div>
-            <img class="poster__one" src="img/poster__image2.png" alt="">
-            <div class="first__info">
-                <div class="card__header" >
-                    <span class="event__name" >Опера VS Оперетта</span>
-                </div>
-                <div class="card__middle">
-                    <span class="event__second__name" >Санкт-Петербургский камерный оркестр Olympic<br>Orchestra</span>
-                </div>
-                <div class="card__bottom">
-                    <div>
-                        <svg class="type__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M6 18.573c2.206 0 4-1.794 4-4V4.428L19 7.7v7.43a3.953 3.953 0 0 0-2-.557c-2.206 0-4 1.794-4 4s1.794 4 4 4s4-1.794 4-4V7a.998.998 0 0 0-.658-.939l-11-4A.999.999 0 0 0 8 3v8.13a3.953 3.953 0 0 0-2-.557c-2.206 0-4 1.794-4 4s1.794 4 4 4"/></svg>
-                        <span class="type__name" >Классика</span>
+                    <div class="card__bottom">
+                        <div>
+                            <svg class="type__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M6 18.573c2.206 0 4-1.794 4-4V4.428L19 7.7v7.43a3.953 3.953 0 0 0-2-.557c-2.206 0-4 1.794-4 4s1.794 4 4 4s4-1.794 4-4V7a.998.998 0 0 0-.658-.939l-11-4A.999.999 0 0 0 8 3v8.13a3.953 3.953 0 0 0-2-.557c-2.206 0-4 1.794-4 4s1.794 4 4 4"/></svg>
+                            <span class="type__name" >Джаз</span>
+                        </div>
+                        <div>
+                            <svg class="type__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none"><path d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12S6.477 2 12 2m0 4a1 1 0 0 0-1 1v5a1 1 0 0 0 .293.707l3 3a1 1 0 0 0 1.414-1.414L13 11.586V7a1 1 0 0 0-1-1"/></g></svg>
+                            <span class="time">19:00</span>
+                        </div>
+                        <div>
+                            <svg class="type__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512"><path fill="currentColor" d="M332.64 64.58C313.18 43.57 286 32 256 32c-30.16 0-57.43 11.5-76.8 32.38c-19.58 21.11-29.12 49.8-26.88 80.78C156.76 206.28 203.27 256 256 256s99.16-49.71 103.67-110.82c2.27-30.7-7.33-59.33-27.03-80.6M432 480H80a31 31 0 0 1-24.2-11.13c-6.5-7.77-9.12-18.38-7.18-29.11C57.06 392.94 83.4 353.61 124.8 326c36.78-24.51 83.37-38 131.2-38s94.42 13.5 131.2 38c41.4 27.6 67.74 66.93 76.18 113.75c1.94 10.73-.68 21.34-7.18 29.11A31 31 0 0 1 432 480"/></svg>
+                            <span class="age__value">6+</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="selling__btn">
-                <form action="https://www.bing.com/search?">
-                    <input name="q" type="hidden" value="search">
-                    <input type="hidden" name="title" value="Опера VS Оперетта">
-                    <input type="datetime" name="date" value="2024-06-30" style="display: none;">
-                    <input class="sell" type="submit" value="Заказать билет" style="font-family: Fira Sans, sans-serif;">
-                </form>
-            </div>
-        </div>
-        <div class="soon__first">
-            <div class="data__event__first">
-                <span class="number">1</span>
-                <span class="month">июля</span>
-            </div>
-            <img class="poster__one" src="img/poster__image.png" alt="">
-            <div class="first__info">
-                <div class="card__header" >
-                    <span class="event__name" >Антонио Вивальди. Времена<br>года</span>
+                <div class="selling__btn">
+                    <form action="https://www.bing.com/search?">
+                        <input name="q" type="hidden" value="search">
+                        <input type="hidden" name="title" value="Антонио Вивальди. Времена года">
+                        <input type="datetime" name="date" value="2024-06-03" style="display: none;">
+                        <input class="sell" type="submit" value="Заказать билет" style="font-family: Fira Sans, sans-serif">
+                    </form>
                 </div>
-                <div class="card__middle">
-                    <span class="event__second__name" >Посвящение Фрэнку Синатре.</span>
+            </div>
+            <div class="soon__second">
+                <div class="data__event__first">
+                    <span class="number__sec">30</span>
+                    <span class="month">июня</span>
                 </div>
-                <div class="card__bottom">
-                    <div>
-                        <svg class="type__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M6 18.573c2.206 0 4-1.794 4-4V4.428L19 7.7v7.43a3.953 3.953 0 0 0-2-.557c-2.206 0-4 1.794-4 4s1.794 4 4 4s4-1.794 4-4V7a.998.998 0 0 0-.658-.939l-11-4A.999.999 0 0 0 8 3v8.13a3.953 3.953 0 0 0-2-.557c-2.206 0-4 1.794-4 4s1.794 4 4 4"/></svg>
-                        <span class="type__name" >Джаз</span>
+                <img class="poster__one" src="img/poster__image2.png" alt="">
+                <div class="first__info">
+                    <div class="card__header" >
+                        <span class="event__name" >Опера VS Оперетта</span>
                     </div>
-                    <div>
-                        <svg class="type__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none"><path d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12S6.477 2 12 2m0 4a1 1 0 0 0-1 1v5a1 1 0 0 0 .293.707l3 3a1 1 0 0 0 1.414-1.414L13 11.586V7a1 1 0 0 0-1-1"/></g></svg>
-                        <span class="time">19:00</span>
+                    <div class="card__middle">
+                        <span class="event__second__name" >Санкт-Петербургский камерный оркестр Olympic<br>Orchestra</span>
                     </div>
-                    <div>
-                        <svg class="type__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512"><path fill="currentColor" d="M332.64 64.58C313.18 43.57 286 32 256 32c-30.16 0-57.43 11.5-76.8 32.38c-19.58 21.11-29.12 49.8-26.88 80.78C156.76 206.28 203.27 256 256 256s99.16-49.71 103.67-110.82c2.27-30.7-7.33-59.33-27.03-80.6M432 480H80a31 31 0 0 1-24.2-11.13c-6.5-7.77-9.12-18.38-7.18-29.11C57.06 392.94 83.4 353.61 124.8 326c36.78-24.51 83.37-38 131.2-38s94.42 13.5 131.2 38c41.4 27.6 67.74 66.93 76.18 113.75c1.94 10.73-.68 21.34-7.18 29.11A31 31 0 0 1 432 480"/></svg>
-                        <span class="age__value">6+</span>
+                    <div class="card__bottom">
+                        <div>
+                            <svg class="type__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M6 18.573c2.206 0 4-1.794 4-4V4.428L19 7.7v7.43a3.953 3.953 0 0 0-2-.557c-2.206 0-4 1.794-4 4s1.794 4 4 4s4-1.794 4-4V7a.998.998 0 0 0-.658-.939l-11-4A.999.999 0 0 0 8 3v8.13a3.953 3.953 0 0 0-2-.557c-2.206 0-4 1.794-4 4s1.794 4 4 4"/></svg>
+                            <span class="type__name" >Классика</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="selling__btn">
-                <form action="https://www.bing.com/search?">
-                    <input name="q" type="hidden" value="search">
-                    <input type="hidden" name="title" value="Антонио Вивальди. Времена года">
-                    <input type="datetime" name="date" value="2024-07-01" style="display: none;">
-                    <input class="sell" type="submit" value="Заказать билет" style="font-family: Fira Sans, sans-serif">
-                </form>
-            </div>
-        </div>
-        <div class="soon__first">
-            <div class="data__event__first">
-                <span class="number">9</span>
-                <span class="month">июля</span>
-            </div>
-            <img class="poster__one" src="img/poster__image.png" alt="">
-            <div class="first__info">
-                <div class="card__header" >
-                    <span class="event__name" >Антонио Вивальди. Времена<br>года</span>
+                <div class="selling__btn">
+                    <form action="https://www.bing.com/search?">
+                        <input name="q" type="hidden" value="search">
+                        <input type="hidden" name="title" value="Опера VS Оперетта">
+                        <input type="datetime" name="date" value="2024-06-30" style="display: none;">
+                        <input class="sell" type="submit" value="Заказать билет" style="font-family: Fira Sans, sans-serif;">
+                    </form>
                 </div>
-                <div class="card__middle">
-                    <span class="event__second__name" >Посвящение Фрэнку Синатре.</span>
+            </div>
+            <div class="soon__first">
+                <div class="data__event__first">
+                    <span class="number">1</span>
+                    <span class="month">июля</span>
                 </div>
-                <div class="card__bottom">
-                    <div>
-                        <svg class="type__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M6 18.573c2.206 0 4-1.794 4-4V4.428L19 7.7v7.43a3.953 3.953 0 0 0-2-.557c-2.206 0-4 1.794-4 4s1.794 4 4 4s4-1.794 4-4V7a.998.998 0 0 0-.658-.939l-11-4A.999.999 0 0 0 8 3v8.13a3.953 3.953 0 0 0-2-.557c-2.206 0-4 1.794-4 4s1.794 4 4 4"/></svg>
-                        <span class="type__name" >Джаз</span>
+                <img class="poster__one" src="img/poster__image.png" alt="">
+                <div class="first__info">
+                    <div class="card__header" >
+                        <span class="event__name" >Антонио Вивальди. Времена<br>года</span>
                     </div>
-                    <div>
-                        <svg class="type__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none"><path d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12S6.477 2 12 2m0 4a1 1 0 0 0-1 1v5a1 1 0 0 0 .293.707l3 3a1 1 0 0 0 1.414-1.414L13 11.586V7a1 1 0 0 0-1-1"/></g></svg>
-                        <span class="time">20:00</span>
+                    <div class="card__middle">
+                        <span class="event__second__name" >Посвящение Фрэнку Синатре.</span>
                     </div>
-                    <div>
-                        <svg class="type__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512"><path fill="currentColor" d="M332.64 64.58C313.18 43.57 286 32 256 32c-30.16 0-57.43 11.5-76.8 32.38c-19.58 21.11-29.12 49.8-26.88 80.78C156.76 206.28 203.27 256 256 256s99.16-49.71 103.67-110.82c2.27-30.7-7.33-59.33-27.03-80.6M432 480H80a31 31 0 0 1-24.2-11.13c-6.5-7.77-9.12-18.38-7.18-29.11C57.06 392.94 83.4 353.61 124.8 326c36.78-24.51 83.37-38 131.2-38s94.42 13.5 131.2 38c41.4 27.6 67.74 66.93 76.18 113.75c1.94 10.73-.68 21.34-7.18 29.11A31 31 0 0 1 432 480"/></svg>
-                        <span class="age__value">6+</span>
-                    </div>
-                </div>
-            </div>
-            <div class="selling__btn">
-                <form action="https://www.bing.com/search?">
-                    <input name="q" type="hidden" value="search">
-                    <input type="hidden" name="title" value="Антонио Вивальди. Времена года">
-                    <input type="datetime" name="date" value="2024-07-09" style="display: none;">
-                    <input class="sell" type="submit" value="Заказать билет" style="font-family: Fira Sans, sans-serif">
-                </form>
-            </div>
-        </div>
-        <div class="soon__second">
-            <div class="data__event__first">
-                <span class="number__sec">12</span>
-                <span class="month">июля</span>
-            </div>
-            <img class="poster__one" src="img/poster__image2.png" alt="">
-            <div class="first__info">
-                <div class="card__header" >
-                    <span class="event__name" >Опера VS Оперетта</span>
-                </div>
-                <div class="card__middle">
-                    <span class="event__second__name" >Санкт-Петербургский камерный оркестр Olympic<br>Orchestra</span>
-                </div>
-                <div class="card__bottom">
-                    <div>
-                        <svg class="type__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M6 18.573c2.206 0 4-1.794 4-4V4.428L19 7.7v7.43a3.953 3.953 0 0 0-2-.557c-2.206 0-4 1.794-4 4s1.794 4 4 4s4-1.794 4-4V7a.998.998 0 0 0-.658-.939l-11-4A.999.999 0 0 0 8 3v8.13a3.953 3.953 0 0 0-2-.557c-2.206 0-4 1.794-4 4s1.794 4 4 4"/></svg>
-                        <span class="type__name" >Классика</span>
+                    <div class="card__bottom">
+                        <div>
+                            <svg class="type__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M6 18.573c2.206 0 4-1.794 4-4V4.428L19 7.7v7.43a3.953 3.953 0 0 0-2-.557c-2.206 0-4 1.794-4 4s1.794 4 4 4s4-1.794 4-4V7a.998.998 0 0 0-.658-.939l-11-4A.999.999 0 0 0 8 3v8.13a3.953 3.953 0 0 0-2-.557c-2.206 0-4 1.794-4 4s1.794 4 4 4"/></svg>
+                            <span class="type__name" >Джаз</span>
+                        </div>
+                        <div>
+                            <svg class="type__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none"><path d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12S6.477 2 12 2m0 4a1 1 0 0 0-1 1v5a1 1 0 0 0 .293.707l3 3a1 1 0 0 0 1.414-1.414L13 11.586V7a1 1 0 0 0-1-1"/></g></svg>
+                            <span class="time">19:00</span>
+                        </div>
+                        <div>
+                            <svg class="type__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512"><path fill="currentColor" d="M332.64 64.58C313.18 43.57 286 32 256 32c-30.16 0-57.43 11.5-76.8 32.38c-19.58 21.11-29.12 49.8-26.88 80.78C156.76 206.28 203.27 256 256 256s99.16-49.71 103.67-110.82c2.27-30.7-7.33-59.33-27.03-80.6M432 480H80a31 31 0 0 1-24.2-11.13c-6.5-7.77-9.12-18.38-7.18-29.11C57.06 392.94 83.4 353.61 124.8 326c36.78-24.51 83.37-38 131.2-38s94.42 13.5 131.2 38c41.4 27.6 67.74 66.93 76.18 113.75c1.94 10.73-.68 21.34-7.18 29.11A31 31 0 0 1 432 480"/></svg>
+                            <span class="age__value">6+</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="selling__btn">
-                <form action="https://www.bing.com/search?">
-                    <input name="q" type="hidden" value="search">
-                    <input type="hidden" name="title" value="Опера VS Оперетта">
-                    <input type="datetime" name="date" value="2024-07-12" style="display: none;">
-                    <input class="sell" type="submit" value="Заказать билет" style="font-family: Fira Sans, sans-serif;">
-                </form>
-            </div>
-        </div>
-        <div class="soon__second">
-            <div class="data__event__first">
-                <span class="number__sec">25</span>
-                <span class="month">июля</span>
-            </div>
-            <img class="poster__one" src="img/poster__image2.png" alt="">
-            <div class="first__info">
-                <div class="card__header" >
-                    <span class="event__name" >Опера VS Оперетта</span>
+                <div class="selling__btn">
+                    <form action="https://www.bing.com/search?">
+                        <input name="q" type="hidden" value="search">
+                        <input type="hidden" name="title" value="Антонио Вивальди. Времена года">
+                        <input type="datetime" name="date" value="2024-07-01" style="display: none;">
+                        <input class="sell" type="submit" value="Заказать билет" style="font-family: Fira Sans, sans-serif">
+                    </form>
                 </div>
-                <div class="card__middle">
-                    <span class="event__second__name" >Санкт-Петербургский камерный оркестр Olympic<br>Orchestra</span>
+            </div>
+            <div class="soon__first">
+                <div class="data__event__first">
+                    <span class="number">9</span>
+                    <span class="month">июля</span>
                 </div>
-                <div class="card__bottom">
-                    <div>
-                        <svg class="type__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M6 18.573c2.206 0 4-1.794 4-4V4.428L19 7.7v7.43a3.953 3.953 0 0 0-2-.557c-2.206 0-4 1.794-4 4s1.794 4 4 4s4-1.794 4-4V7a.998.998 0 0 0-.658-.939l-11-4A.999.999 0 0 0 8 3v8.13a3.953 3.953 0 0 0-2-.557c-2.206 0-4 1.794-4 4s1.794 4 4 4"/></svg>
-                        <span class="type__name" >Классика</span>
+                <img class="poster__one" src="img/poster__image.png" alt="">
+                <div class="first__info">
+                    <div class="card__header" >
+                        <span class="event__name" >Антонио Вивальди. Времена<br>года</span>
+                    </div>
+                    <div class="card__middle">
+                        <span class="event__second__name" >Посвящение Фрэнку Синатре.</span>
+                    </div>
+                    <div class="card__bottom">
+                        <div>
+                            <svg class="type__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M6 18.573c2.206 0 4-1.794 4-4V4.428L19 7.7v7.43a3.953 3.953 0 0 0-2-.557c-2.206 0-4 1.794-4 4s1.794 4 4 4s4-1.794 4-4V7a.998.998 0 0 0-.658-.939l-11-4A.999.999 0 0 0 8 3v8.13a3.953 3.953 0 0 0-2-.557c-2.206 0-4 1.794-4 4s1.794 4 4 4"/></svg>
+                            <span class="type__name" >Джаз</span>
+                        </div>
+                        <div>
+                            <svg class="type__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none"><path d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12S6.477 2 12 2m0 4a1 1 0 0 0-1 1v5a1 1 0 0 0 .293.707l3 3a1 1 0 0 0 1.414-1.414L13 11.586V7a1 1 0 0 0-1-1"/></g></svg>
+                            <span class="time">20:00</span>
+                        </div>
+                        <div>
+                            <svg class="type__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512"><path fill="currentColor" d="M332.64 64.58C313.18 43.57 286 32 256 32c-30.16 0-57.43 11.5-76.8 32.38c-19.58 21.11-29.12 49.8-26.88 80.78C156.76 206.28 203.27 256 256 256s99.16-49.71 103.67-110.82c2.27-30.7-7.33-59.33-27.03-80.6M432 480H80a31 31 0 0 1-24.2-11.13c-6.5-7.77-9.12-18.38-7.18-29.11C57.06 392.94 83.4 353.61 124.8 326c36.78-24.51 83.37-38 131.2-38s94.42 13.5 131.2 38c41.4 27.6 67.74 66.93 76.18 113.75c1.94 10.73-.68 21.34-7.18 29.11A31 31 0 0 1 432 480"/></svg>
+                            <span class="age__value">6+</span>
+                        </div>
                     </div>
                 </div>
+                <div class="selling__btn">
+                    <form action="https://www.bing.com/search?">
+                        <input name="q" type="hidden" value="search">
+                        <input type="hidden" name="title" value="Антонио Вивальди. Времена года">
+                        <input type="datetime" name="date" value="2024-07-09" style="display: none;">
+                        <input class="sell" type="submit" value="Заказать билет" style="font-family: Fira Sans, sans-serif">
+                    </form>
+                </div>
             </div>
-            <div class="selling__btn">
-                <form action="https://www.bing.com/search?">
-                    <input name="q" type="hidden" value="search">
-                    <input type="hidden" name="title" value="Опера VS Оперетта">
-                    <input type="datetime" name="date" value="2024-07-25" style="display: none;">
-                    <input class="sell" type="submit" value="Заказать билет" style="font-family: Fira Sans, sans-serif;">
-                </form>
+            <div class="soon__second">
+                <div class="data__event__first">
+                    <span class="number__sec">12</span>
+                    <span class="month">июля</span>
+                </div>
+                <img class="poster__one" src="img/poster__image2.png" alt="">
+                <div class="first__info">
+                    <div class="card__header" >
+                        <span class="event__name" >Опера VS Оперетта</span>
+                    </div>
+                    <div class="card__middle">
+                        <span class="event__second__name" >Санкт-Петербургский камерный оркестр Olympic<br>Orchestra</span>
+                    </div>
+                    <div class="card__bottom">
+                        <div>
+                            <svg class="type__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M6 18.573c2.206 0 4-1.794 4-4V4.428L19 7.7v7.43a3.953 3.953 0 0 0-2-.557c-2.206 0-4 1.794-4 4s1.794 4 4 4s4-1.794 4-4V7a.998.998 0 0 0-.658-.939l-11-4A.999.999 0 0 0 8 3v8.13a3.953 3.953 0 0 0-2-.557c-2.206 0-4 1.794-4 4s1.794 4 4 4"/></svg>
+                            <span class="type__name" >Классика</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="selling__btn">
+                    <form action="https://www.bing.com/search?">
+                        <input name="q" type="hidden" value="search">
+                        <input type="hidden" name="title" value="Опера VS Оперетта">
+                        <input type="datetime" name="date" value="2024-07-12" style="display: none;">
+                        <input class="sell" type="submit" value="Заказать билет" style="font-family: Fira Sans, sans-serif;">
+                    </form>
+                </div>
+            </div>
+            <div class="soon__second">
+                <div class="data__event__first">
+                    <span class="number__sec">25</span>
+                    <span class="month">июля</span>
+                </div>
+                <img class="poster__one" src="img/poster__image2.png" alt="">
+                <div class="first__info">
+                    <div class="card__header" >
+                        <span class="event__name" >Опера VS Оперетта</span>
+                    </div>
+                    <div class="card__middle">
+                        <span class="event__second__name" >Санкт-Петербургский камерный оркестр Olympic<br>Orchestra</span>
+                    </div>
+                    <div class="card__bottom">
+                        <div>
+                            <svg class="type__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M6 18.573c2.206 0 4-1.794 4-4V4.428L19 7.7v7.43a3.953 3.953 0 0 0-2-.557c-2.206 0-4 1.794-4 4s1.794 4 4 4s4-1.794 4-4V7a.998.998 0 0 0-.658-.939l-11-4A.999.999 0 0 0 8 3v8.13a3.953 3.953 0 0 0-2-.557c-2.206 0-4 1.794-4 4s1.794 4 4 4"/></svg>
+                            <span class="type__name" >Классика</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="selling__btn">
+                    <form action="https://www.bing.com/search?">
+                        <input name="q" type="hidden" value="search">
+                        <input type="hidden" name="title" value="Опера VS Оперетта">
+                        <input type="datetime" name="date" value="2024-07-25" style="display: none;">
+                        <input class="sell" type="submit" value="Заказать билет" style="font-family: Fira Sans, sans-serif;">
+                    </form>
+                </div>
             </div>
         </div>
     </div>
@@ -364,6 +371,7 @@
             </div>
         </div>
     </div>
+    <script src="scripts/index.js"></script>
 </body>
 </html>
 
