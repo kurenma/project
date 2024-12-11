@@ -308,6 +308,10 @@ a {
     margin-right: auto;
 }
 
+.task {
+    height: 935px;
+}
+
 .af__header {
     display: flex;
     height: 67px;
