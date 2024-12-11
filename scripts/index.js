@@ -34,3 +34,17 @@
         });
 
     });
+
+    document.getElementById('search-btn').addEventListener('click', function() {
+        const searchTerm = document.getElementById('search-input').value.toLowerCase();
+        const events = document.querySelectorAll('.soon__first, .soon__second');
+
+        events.forEach(event => {
+            const eventName = event.querySelector('input[name="title"]').value.toLowerCase();
+            if (eventName.includes(searchTerm)) {
+                event.style.display = '';
+            } else {
+                event.style.display = 'none';
+            }
+        });
+    })
